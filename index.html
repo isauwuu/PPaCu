@@ -668,8 +668,7 @@
         return { btn, flor, foto, svg, abierta: false, jx: (Math.random() - .5) * .12, jy: (Math.random() - .5) * .1 };
       });
 
-      $('etiqueta').innerHTML = `<b>${TOTAL} flores</b>amarillas, 100% hechas con amor <3`;
-    }
+  
 
     function colocar() {
       const ramo = $('ramo');
@@ -736,7 +735,7 @@
       if ($('escena2').classList.contains('activa')) colocar();
     });
 
-    /* ---------- abrir una flor ---------- */
+
     let vistaActual = -1;
 
     function actualizarContador() {
@@ -831,7 +830,7 @@
       }, 260);
     }
 
-    /* un guiño a alguna flor cerrada para que la toquen */
+
     setInterval(() => {
       if (terminado) return;
       if (!$('escena2').classList.contains('activa')) return;
@@ -844,7 +843,6 @@
       f.flor.classList.add('guino');
     }, 2600);
 
-    /* ---------- cambio de escena ---------- */
     let escenaCambiada = false;
 
     function iniciarSorpresa() {
@@ -859,7 +857,7 @@
       setTimeout(() => {
         $('intro').style.display = 'none';
         $('titulo').innerHTML = `<span>Te traje ${TOTAL} flores amarillas</span>`;
-        $('subtitulo').textContent = 'feliz día de la primavera uwu🌷';
+        $('subtitulo').textContent = 'feliz día de la primavera uwu';
         actualizarContador();
         $('escena2').classList.add('activa');
         armarRamo();
